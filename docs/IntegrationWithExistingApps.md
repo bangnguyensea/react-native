@@ -250,6 +250,7 @@ target 'swift-2048' do
     'RCTNetwork',
     'RCTWebSocket', # needed for debugging
     # Add any other subspecs you want to use in your project
+    'BatchedBridge',
   ]
   # Explicitly include Yoga if you are using RN >= 0.42.0
   pod "Yoga", :path => "../node_modules/react-native/ReactCommon/yoga"
@@ -351,7 +352,7 @@ const styles = StyleSheet.create({
 });
 
 // Module name
-AppRegistry.registerComponent('MyReactNativeApp', () => RNHighScores);
+AppRegistry.registerComponent('RNHighScores', () => RNHighScores);
 ```
 
 > `RNHighScores` is the name of your module that will be used when you add a view to React Native from within your iOS application.
